@@ -16,4 +16,4 @@ function whatAmI(input) {
 
 function isItTruthy(input) {
     return input ? "It's truthy!" : "It's falsey!";
-}
+}   
