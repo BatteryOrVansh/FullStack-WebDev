@@ -40,7 +40,13 @@ console.log(teaCollection);
 /* 
 4. Write a `do while` loop that adds numbers from 1 to 3 and stores the result in a variable named `total`.
 */
-
+let total = 0;
+let st = 1
+do{
+    total+=st;
+    st++;
+}while(st<=3);
+console.log(total);
 
 
 /* 
