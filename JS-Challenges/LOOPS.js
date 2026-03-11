@@ -124,6 +124,15 @@ console.log(smallNumbers);
 10. Use a `for-of` loop to iterate through the array `["chai", "green tea", "herbal tea", "black tea"]` and skip `"herbal tea"`. 
    Store the other teas in an array named `preferredTeas`.
 */
+let tea2 = ["chai", "green tea", "herbal tea", "black tea"];
+let preferredTeas = [];
+for (chai of tea2){
+    if (chai == "herbal tea"){
+        continue;
+    }
+    preferredTeas.push(chai);
+}
+console.log(preferredTeas);
 
 
 
