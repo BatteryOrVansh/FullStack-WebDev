@@ -251,5 +251,13 @@ console.log(doubledNumbers);
     and stop when the length of the current tea name is greater than 10. 
     Store the teas iterated over in an array named `shortTeas`.
 */
-
+let chai2 = ["chai", "green tea", "black tea", "jasmine tea", "herbal tea"];
+let shortTeas = [];
+for (const tea of chai2){
+    if (tea.length>10){
+        break;
+    }
+    shortTeas.push(tea)
+}
+console.log(shortTeas);
 
