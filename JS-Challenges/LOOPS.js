@@ -196,6 +196,15 @@ console.log(largeCities);
 13. Write a `forEach` loop that iterates through the array `["earl grey", "green tea", "chai", "oolong tea"]`. 
    Stop the loop when `"chai"` is found, and store all previous tea types in an array named `availableTeas`.
 */
+let ocha = ["earl grey", "green tea", "chai", "oolong tea"]
+let availableTeas = [];
+ocha.forEach(function (tea){
+    if (tea==="chai"){
+        return;
+    }
+    availableTeas.push(tea);
+})
+console.log(availableTeas);
 
 
 
