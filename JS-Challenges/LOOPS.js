@@ -198,23 +198,37 @@ console.log(largeCities);
 */
 let ocha = ["earl grey", "green tea", "chai", "oolong tea"]
 let availableTeas = [];
+let stop = false;
 ocha.forEach(function (tea){
     if (tea==="chai"){
-        return;
+        stop = true;
     }
-    availableTeas.push(tea);
+    if (!stop){
+        availableTeas.push(tea);
+    }
 })
 console.log(availableTeas);
 
 
 
-// console.log(availableTeas);
-
+/* 
+14. Write a `forEach` loop that iterates through the array `["Berlin", "Tokyo", "Sydney", "Paris"]`. 
+   Skip `"Sydney"` and store the other cities in a new array named `traveledCities`.
+*/
 /* 
 14. Write a `forEach` loop that iterates through the array `["Berlin", "Tokyo", "Sydney", "Paris"]`. 
    Skip `"Sydney"` and store the other cities in a new array named `traveledCities`.
 */
 
+let shehar = ["Berlin", "Tokyo", "Sydney", "Paris"];
+let traveledCities = [];
+shehar.forEach((city) => {
+    if (city === "Sydney"){
+        return;
+    }
+    traveledCities.push(city)
+})
+console.log(traveledCities);
 
 
 /* 
