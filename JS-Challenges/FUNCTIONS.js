@@ -27,6 +27,11 @@ console.log(orderTea("masala chai"));
 3. Write an arrow function named `calculateTotal` that takes two parameters: `price` and `quantity`. The function should return the total cost by multiplying the `price` and `quantity`. 
 Store the result in a variable named `totalCost`.
 */
+function calculateTotal(price, qty){
+    totalCost = price*qty;
+    return totalCost;
+}
+console.log(calculateTotal(500,2))
 
 
 /* 
