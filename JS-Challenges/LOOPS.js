@@ -146,8 +146,22 @@ console.log(preferredTeas);
     "Paris": 2200000,
     "Berlin": 3500000
 };
-
 */
+let citiesPopulation = {
+    "London": 8900000,
+    "New York": 8400000,
+    "Paris": 2200000,
+    "Berlin": 3500000
+};
+let cityPopulations = {};
+for (const city in citiesPopulation) {
+    if (city == "Berlin"){
+        break;
+    }
+    cityPopulations[city] = citiesPopulation[city];
+}
+console.log(cityPopulations)
+
 
 
 /* 
