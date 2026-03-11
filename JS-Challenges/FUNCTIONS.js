@@ -38,7 +38,14 @@ console.log(calculateTotal(500,2))
 4. Write a function named `processTeaOrder` that takes another function, `makeTea`, as a parameter and calls it with the argument `"earl grey"`. 
 Return the result of calling `makeTea`.
 */
-
+function makeTea(teaType){
+    return `Making ${teaType}`;
+}
+function processTeaOrder(makeTeaFunction){
+    return makeTeaFunction("earl grey");
+}
+let result = processTeaOrder(makeTea);
+console.log(result);
 
 /* 
 5. Write a function named `createTeaMaker` that returns another function. The returned function should take one parameter, `teaType`, and return a message like `"Making green tea"`. 
