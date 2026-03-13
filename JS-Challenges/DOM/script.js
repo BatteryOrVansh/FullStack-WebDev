@@ -13,3 +13,13 @@ document.getElementById("highlightFirstCity").addEventListener('click', () => {
 document.getElementById("changeOrder").addEventListener('click', () => {
     document.getElementById("coffeeType").textContent = "Espresso";
 });
+
+// example 4
+document.getElementById("addNewItem").addEventListener('click', () => {
+    let newItem = document.createElement('li');
+    newItem.textContent = "Butter";
+
+    let shoppingList = document.getElementById("shoppingList");
+    shoppingList.appendChild(newItem);
+    
+})
