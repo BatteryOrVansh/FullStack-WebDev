@@ -23,3 +23,9 @@ document.getElementById("addNewItem").addEventListener('click', () => {
     shoppingList.appendChild(newItem);
     
 })
+
+// example 5
+document.getElementById("removeLastTask").addEventListener('click', () => {
+    let taskList = document.getElementById("taskList");
+    taskList.lastElementChild.remove();
+})
