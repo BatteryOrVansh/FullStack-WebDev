@@ -9,3 +9,7 @@ document.getElementById("highlightFirstCity").addEventListener('click', () => {
     cities.firstElementChild.classList.add("highlight")
 });
 
+// example 3
+document.getElementById("changeOrder").addEventListener('click', () => {
+    document.getElementById("coffeeType").textContent = "Espresso";
+});
