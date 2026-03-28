@@ -6,7 +6,7 @@ document.getElementById("changeTextButton").addEventListener('click', () => {
 // example 2
 document.getElementById("highlightFirstCity").addEventListener('click', () => {
     let cities = document.getElementById("citiesList");
-    cities.firstElementChild.classList.add("highlight")
+    cities.firstElementChild.classList.add("highlight");
 });
 
 // example 3
@@ -28,4 +28,10 @@ document.getElementById("addNewItem").addEventListener('click', () => {
 document.getElementById("removeLastTask").addEventListener('click', () => {
     let taskList = document.getElementById("taskList");
     taskList.lastElementChild.remove();
-})
+});
+
+// example 6
+document.getElementById("clickMeButton").addEventListener('dblclick', () => {
+    let para = document.getElementById("para")
+    para.classList.add('highlight');
+});
