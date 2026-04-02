@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let totalAmount = calculateTotal();
 
   renderExpenses();
+  updateTotal();
   
   expenseForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         amount: amount
       };
       expenses.push(newExpense);
+
       saveExpensesToLocal();
       renderExpenses(); 
       updateTotal();
@@ -32,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
   });
-
 
   function renderExpenses(){
     expenseList.innerHTML = "";
@@ -60,6 +61,15 @@ document.addEventListener('DOMContentLoaded', () => {
     totalAmountDisplay.textContent = totalAmount.toFixed(2);
   }
 
+  expenseList.addEventListener('click', (e) => {
+    if(e.target.tagName === "BUTTON") {
+      const expenseId = parseInt(e.target.getAttribute('data-id'));
+      expenses = expenses.filter((expense) => expense.id !== expenseId);
 
+      saveExpensesToLocal();
+      renderExpenses();
+      updateTotal();
+    }
+  });
 
 });
