@@ -20,9 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
         amount: amount
       };
       expenses.push(newExpense);
-
       saveExpensesToLocal();
     }
+
+    // clear input
+    expenseNameInput.value = "";
+    expenseAmountInput.value = "";
     
   });
 
