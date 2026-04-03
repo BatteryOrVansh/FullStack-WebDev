@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if(currentQuestionIndex < questions.length){
       showQuestion();
     }else {
-      showResults();
+      showResult();
     }
   });
 
@@ -74,5 +74,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     nextBtn.classList.remove('hidden'); 
   };
+
+  showResult() {
+    questionContainer.classList.add('hidden');
+    resultContainer.classList.remove('hidden');
+    scoreDisplay.textContent = `${score} out of ${questions.length}`;
+    
+  };
+
 
 });
