@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  
+
   const questionContainer = document.getElementById('question-container'); 
   const questionText = document.getElementById('question-text');
   const choicesList = document.getElementById('choices-list');
@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const scoreDisplay = document.getElementById('score');
   const restartBtn = document.getElementById('restart-btn'); 
   const startBtn = document.getElementById('start-btn');
-  
 
   const questions = [
     {
@@ -32,5 +31,31 @@ document.addEventListener("DOMContentLoaded", () => {
       answer: "William Shakespeare",
     },
   ];
+
+  let currentQuestionIndex = 0;
+  let score = 0;
+
+  startBtn.addEventListener('click', startQuiz);
+
+  function startQuiz() {
+    startBtn.classList.add('hidden');
+    resultContainer.classList.add('hidden');
+    questionContainer.classList.remove('hidden');
+
+    showQuestion();
+  };
+
+  function showQuestion() {
+    nextBtn.classList.add('hidden');
+    questionText.innerText = questions[currentQuestionIndex].question;
+    choicesList.innerHTML = ""; // clear previous choices
+    questions[currentQuestionIndex].choices.forEach(choice => {
+      const li = document.createElement('li');
+      li.textContent = choice;
+      li.addEventListener('click', () => selectAnswer(choice));
+      choicesList.appendChild(li);
+    });
+    
+  };
 
 });
