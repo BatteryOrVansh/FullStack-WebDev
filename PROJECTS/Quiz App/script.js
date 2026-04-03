@@ -37,6 +37,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   startBtn.addEventListener('click', startQuiz);
 
+  nextBtn.addEventListener('click', () => {
+    currentQuestionIndex++;
+    if(currentQuestionIndex < questions.length){
+      showQuestion();
+    }else {
+      showResults();
+    }
+  });
+
   function startQuiz() {
     startBtn.classList.add('hidden');
     resultContainer.classList.add('hidden');
@@ -56,6 +65,14 @@ document.addEventListener("DOMContentLoaded", () => {
       choicesList.appendChild(li);
     });
     
+  };
+
+  function selectAnswer(choice) {
+    const correctAnswer = questions[currentQuestionIndex].answer;
+    if(choice === correctAnswer){
+      score++;
+    }
+    nextBtn.classList.remove('hidden'); 
   };
 
 });
